@@ -70,6 +70,23 @@ values
 select* from Customer;
 drop table Customer;
 
+/*Don't insert the duplicate values because then the procedure would show error.
+Error - Duplicate value for bookId which is a primary key.
+Reason for error -:
+ Primary key(bookid) is unique so we cannot add duplicate values.
+ When procedure is called it would add the first tuple into the relation,
+ then it iterates and throws an error becaue it encounters the same value of bookid which is a primary key.
+ 
+ Error shown -:
+ 11:58:08	call InsertValues()	Error Code: 1062. Duplicate entry '1087' for key 'books.PRIMARY'	0.0070 sec.
+ 
+ Modify the procedure-:
+ 1).Change the value of x < "NUMBER"
+ 2).Modify the "NUMBER" according to your requirements , that is how many tuples you want to add.
+ 3).Update on line 93.
+ 3).Run the procedure.
+*/
+
 delimiter $$
 drop procedure if exists InsertValues$$
 create procedure InsertValues()
