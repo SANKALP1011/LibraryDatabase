@@ -96,7 +96,7 @@ set x:= 1;
 while x < 2 do
 insert into Books 
 values(1001,"hh","kkk","jjj"),
-(1029,"jjj","ff","lll");        #It would show error if you would try to add same value. Add diffrent values then it would work.
+(1029,"jjj","ff","lll");        
 set x = x + 1;
 end while;
 end$$
