@@ -71,13 +71,15 @@ select* from Customer;
 drop table Customer;
 
 delimiter $$
+drop procedure if exists InsertValues$$
 create procedure InsertValues()
 begin
 declare x int;
 set x:= 1;
-while x < 25 do
+while x < 2 do
 insert into Books 
-values(1087,"Secret of nagas","Amish","2-03-2020");  #Insert different value here.
+values(1001,"hh","kkk","jjj"),
+(1029,"jjj","ff","lll");        #It would show error if you would try to add same value. Add diffrent values then it would work.
 set x = x + 1;
 end while;
 end$$
