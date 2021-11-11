@@ -1,7 +1,7 @@
 
-#This is the template of database which we could modify as per our need,we could add the tuples later when the code implementation is done.
-#We could the attributes as per our requiremnt.
-#Currently,there are 17 tuples in our relation.
+-- #This is the template of database which we could modify as per our need,we could add the tuples later when the code implementation is done.
+-- #We could the attributes as per our requiremnt.
+-- #Currently,there are 17 tuples in our relation.
 
 
 create database LibraraySystemdb;
